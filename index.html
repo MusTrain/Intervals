@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="notes"></div>
+      <a href="javascript:void(0)" onclick="nextTask()">Update</a>
+      <div class="answer-panel">
+        <div class="size">
+          <a href="javascript:void(0)" onclick="selectSize('k')">k</a>
+          <a href="javascript:void(0)" onclick="selectSize('G')">G</a>
+        </div>
+        <div class="intervals">
+          <a href="javascript:void(0)" onclick="selectInterval(2)">2</a>
+          <a href="javascript:void(0)" onclick="selectInterval(3)">3</a>
+          <a href="javascript:void(0)" onclick="selectInterval(6)">6</a>
+          <a href="javascript:void(0)" onclick="selectInterval(7)">7</a>
+        </div>
+        <span id="result"></span>
+        <a href="javascript:void(0)" onclick="answer()">Antworten</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vexflow/build/cjs/vexflow.js"></script>
+    <script src="src/generation.js"></script>
+    <script src="src/visual.js"></script>
+    <script src="src/control.js"></script>
+  </body>
+</html>
