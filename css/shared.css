@@ -75,7 +75,7 @@ header {
   justify-content: center;
   padding: 20px 0;
   border-bottom: 1px solid #e7eaf4c3;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 10;
