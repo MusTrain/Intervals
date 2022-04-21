@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__action">
+          <span class="icon-left"></span>
+          <span>Back</span>
+        </div>
+        <div class="header__title">
+          <span>Settings</span>
+        </div>
+        <div class="header__action">
+          <span class="icon-save"></span>
+          <span>Save</span>
+        </div>
+      </div>
+    </header>
+    <section id="gamesAmount">
+      <div class="container">
+        <h4 class="title">Amount of games</h4>
+        <div class="counter">
+          <a id="amountMinus" class="btn btn--icon" href="javascript:void(0)">
+            <span class="icon-minus"></span>
+          </a>
+          <input value="10" type="number" />
+          <a id="amountPlus" class="btn btn--icon" href="javascript:void(0)">
+            <span class="icon-plus"></span>
+          </a>
+        </div>
+        <div class="ready_values">
+          <a class="btn btn--white" href="javascript:void(0)">10</a>
+          <a class="btn btn--white" href="javascript:void(0)">20</a>
+          <a class="btn btn--white btn--active" href="javascript:void(0)">30</a>
+          <a class="btn btn--white" href="javascript:void(0)">40</a>
+        </div>
+      </div>
+    </section>
+    <section id="clefs">
+      <div class="container">
+        <div class="title">Clefs</div>
+        <div class="description">
+          Types of clefs that you will come across in the game
+        </div>
+        <div class="checkbox_list">
+          <div class="inputGroup">
+            <input type="checkbox" id="clefG" />
+            <label for="clefG"><span class="clefBadge">G</span> Clef</label>
+          </div>
+          <div class="inputGroup">
+            <input type="checkbox" id="clefF" />
+            <label for="clefF"><span class="clefBadge">F</span> Clef</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="accidentals">
+      <div class="container">
+        <div class="title">Accidentals</div>
+        <div class="description">
+          Types of accidentals that you will come across in the game
+        </div>
+        <div class="checkbox_list">
+          <div class="inputGroup">
+            <input type="checkbox" id="sharp" />
+            <label for="sharp"><span class="icon-sharp"></span>Sharp</label>
+          </div>
+          <div class="inputGroup">
+            <input type="checkbox" id="flat" />
+            <label for="flat"><span class="icon-flat"></span>Flat</label>
+          </div>
+          <div class="inputGroup">
+            <input type="checkbox" id="natural" />
+            <label for="natural"
+              ><span class="icon-natural"></span>Natural</label
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="accidentals">
+      <div class="container">
+        <div class="title">Staff</div>
+        <div class="description">Display of staff in the game</div>
+        <div class="imageRadio">
+          <div class="radioGroup">
+            <input type="radio" name="staff" id="with" />
+            <label for="with"
+              ><div class="image">
+                <img src="images/staff.svg" alt="Staff" />
+                <span class="icon-blue-check"></span>
+              </div>
+              With staff
+            </label>
+          </div>
+          <div class="radioGroup">
+            <input type="radio" name="staff" id="without" checked />
+            <label for="without">
+              <div class="image">
+                <img src="images/headphones.svg" alt="Staff" />
+                <span class="icon-blue-check"></span>
+              </div>
+              Only audio
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="actions">
+      <div class="container">
+        <a href="javascript:void(0)" class="btn btn--primary"
+          >Start training!</a
+        >
+      </div>
+    </section>
+  </body>
+</html>
