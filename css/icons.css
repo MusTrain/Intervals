@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?dn7by8");
+  src: url("../fonts/icomoon.eot?dn7by8#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?dn7by8") format("truetype"),
+    url("../fonts/icomoon.woff?dn7by8") format("woff"),
+    url("../fonts/icomoon.svg?dn7by8#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:before {
+  content: "\2d";
+  color: #bec3ce;
+}
+.icon-blue-check:before {
+  content: "\5e";
+  color: #1b76ff;
+}
+.icon-plus:before {
+  content: "\2b";
+  color: #bec3ce;
+}
+.icon-left:before {
+  content: "\3c";
+}
+.icon-ukraine .path1:before {
+  content: "\e907";
+  color: rgb(52, 140, 243);
+}
+.icon-ukraine .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(252, 220, 68);
+}
+.icon-check:before {
+  content: "\2705";
+  color: #82bf00;
+}
+.icon-flat:before {
+  content: "\266d";
+  color: #9db2c7;
+}
+.icon-headphones:before {
+  content: "\1f3a7";
+}
+.icon-natural:before {
+  content: "\266e";
+  color: #9db2c7;
+}
+.icon-refresh:before {
+  content: "\e906";
+}
+.icon-save:before {
+  content: "\1f4be";
+  color: #1b76ff;
+}
+.icon-settings:before {
+  content: "\2699";
+  color: #1b76ff;
+}
+.icon-sharp:before {
+  content: "\266f";
+  color: #9db2c7;
+}
+.icon-us .path1:before {
+  content: "\1f1fa";
+  color: rgb(240, 240, 240);
+}
+.icon-us .path2:before {
+  content: "\1f1fb";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icon-us .path3:before {
+  content: "\1f1fc";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icon-us .path4:before {
+  content: "\1f1fd";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icon-us .path5:before {
+  content: "\1f1fe";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icon-us .path6:before {
+  content: "\1f1ff";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icon-x:before {
+  content: "\274c";
+  color: #ff5f5f;
+}
