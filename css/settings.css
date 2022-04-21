@@ -1,0 +1,187 @@
+/* Clefs */
+.clefBadge {
+  background-color: #fff;
+  border: 1px solid #e7eaf4;
+  font-size: 14px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+/* gamesAmount */
+section#gamesAmount {
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding: 40px 0;
+}
+
+.counter {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #e7eaf4;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.counter > input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 30%;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 25px;
+}
+
+.counter input:focus {
+  outline: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ready_values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ready_values:nth-last-child(4) {
+  margin: 0;
+}
+
+/* Checkboxes */
+.checkbox_list {
+  border-radius: 5px;
+  border: 1px solid #e7eaf4;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+
+.inputGroup {
+  position: relative;
+  display: block;
+}
+
+.inputGroup:not(:last-child) {
+  border-bottom: 1px solid #e7eaf4;
+}
+
+.inputGroup label {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.inputGroup input {
+  float: right;
+  width: 22px;
+  height: 22px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.inputGroup label > span {
+  margin-right: 8px;
+}
+
+.imageRadio {
+  display: flex;
+}
+
+.imageRadio label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.imageRadio label > .image {
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e7eaf4;
+  height: 90px;
+  width: 160px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.imageRadio label > .image img {
+  max-width: 160px;
+  max-height: 90px;
+}
+
+.imageRadio {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.radioGroup input {
+  visibility: hidden;
+  position: absolute;
+  top: -50%;
+}
+
+.radioGroup input:checked + label > .image {
+  border: 2px solid var(--primary);
+}
+
+.image > span.icon-blue-check {
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.radioGroup input:checked + label > .image > span.icon-blue-check {
+  display: block;
+}
+
+.radioGroup input:not(:checked) + label > .image > span.icon-blue-check {
+  display: none;
+}
