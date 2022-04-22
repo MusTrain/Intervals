@@ -29,8 +29,9 @@ const inputsToSettings = [
     path: "gamesAmount",
     format: (val) => +val,
     validate: (value) => {
-      const isValidNumber = !isNaN(+value);
-      const isInLimit = value <= MAX_GAMES_AMOUNT || value <= MIN_GAMES_AMOUNT;
+      const int = +value;
+      const isValidNumber = !isNaN(int);
+      const isInLimit = int <= MAX_GAMES_AMOUNT && int >= MIN_GAMES_AMOUNT;
       return isValidNumber && isInLimit;
     },
   },
