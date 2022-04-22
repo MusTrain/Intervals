@@ -3,6 +3,8 @@
 const MIN_GAMES_AMOUNT = 1;
 const MAX_GAMES_AMOUNT = 99;
 
+const GAME_PATH = "game.html";
+
 const defaultSettings = {
   gamesAmount: 10,
   clefs: { g: true, f: false },
@@ -146,5 +148,20 @@ const incrementGamesAmount = () => {
 
 gamesAmountMinus.addEventListener("click", decrementGamesAmount);
 gamesAmountPlus.addEventListener("click", incrementGamesAmount);
+
+/* Submit button */
+const onSubmit = () => {
+  try {
+    // TODO: Maybe should make additional data validation
+    window.location.assign(GAME_PATH);
+  } catch (err) {
+    console.error(err);
+    // TODO: Make custom alerts
+    alert(err.message ? err.message : err);
+  }
+};
+
+const submitButton = getElement("submit");
+submitButton.addEventListener("click", onSubmit);
 
 loadSettings();
