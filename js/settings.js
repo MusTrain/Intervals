@@ -28,18 +28,46 @@ const inputsToSettings = [
     valueName: "value",
     path: "gamesAmount",
     format: (val) => +val,
-    validate: (value) => {
+    validate(value) {
       const int = +value;
       const isValidNumber = !isNaN(int);
       const isInLimit = int <= MAX_GAMES_AMOUNT && int >= MIN_GAMES_AMOUNT;
       return isValidNumber && isInLimit;
     },
   },
-  { input: clefGCheckbox, valueName: "checked", path: "clefs.g" },
-  { input: clefFCheckbox, valueName: "checked", path: "clefs.f" },
-  { input: sharpCheckbox, valueName: "checked", path: "accidentals.sharp" },
-  { input: flatCheckbox, valueName: "checked", path: "accidentals.flat" },
-  { input: naturalCheckbox, valueName: "checked", path: "accidentals.natural" },
+  {
+    input: clefGCheckbox,
+    valueName: "checked",
+    path: "clefs.g",
+    validate: (value) => (!value ? clefFCheckbox.checked : true),
+  },
+  {
+    input: clefFCheckbox,
+    valueName: "checked",
+    path: "clefs.f",
+    validate: (value) => (!value ? clefGCheckbox.checked : true),
+  },
+  {
+    input: sharpCheckbox,
+    valueName: "checked",
+    path: "accidentals.sharp",
+    validate: (value) =>
+      !value ? flatCheckbox.checked || naturalCheckbox.checked : true,
+  },
+  {
+    input: flatCheckbox,
+    valueName: "checked",
+    path: "accidentals.flat",
+    validate: (value) =>
+      !value ? sharpCheckbox.checked || naturalCheckbox.checked : true,
+  },
+  {
+    input: naturalCheckbox,
+    valueName: "checked",
+    path: "accidentals.natural",
+    validate: (value) =>
+      !value ? flatCheckbox.checked || sharpCheckbox.checked : true,
+  },
   {
     input: staffCheckbox,
     valueName: "checked",
