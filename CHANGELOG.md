@@ -4,6 +4,7 @@
 
 - Rename repository from `train-intervals` to `IntervalsTrainer`
 - Init npm package
+- Move markup into `public` folder
 
 ## [0.1.1][] - 2022-05-02
 
