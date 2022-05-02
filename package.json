@@ -1,0 +1,24 @@
+{
+  "name": "intervals-trainer",
+  "version": "0.1.1",
+  "description": "Todo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieopierzony/IntervalsTrainer.git"
+  },
+  "keywords": [
+    "music",
+    "intervals",
+    "game",
+    "trainer"
+  ],
+  "author": "Philipp Zelinskyi (philipp.zelinski@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieopierzony/IntervalsTrainer/issues"
+  },
+  "homepage": "https://github.com/nieopierzony/IntervalsTrainer#readme"
+}
