@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intervals trainer | Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__title left">
+          <span>Intervals</span>
+        </div>
+      </div>
+    </header>
+    <div class="overlay" id="overlay">
+      <div class="alert animateOpen">
+        <div class="container actions">
+          <div class="alertDescription">
+            <div class="correct" id="correctAlert">
+              <span class="icon-check"></span><span>Answer is correct</span>
+            </div>
+            <div class="mistake" id="incorrectAlert">
+              <div class="alertTitle">
+                <span class="icon-x"></span><span>Answer is incorrect</span>
+              </div>
+              <div class="answer">
+                <span class="correct_answer"> Correct answer is: </span>
+                <span id="correctSize">Small</span>
+                <span id="correctDuration">6</span>
+              </div>
+            </div>
+            <a href="javascript:void(0)" id="next" class="btn btn--primary"
+              >Next</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="notesSection">
+      <div class="container">
+        <div class="card">
+          <!-- TODO: Custom notes-->
+          <a href="javascript:void(0)" onclick="nextTask()">
+            <span class="icon-refresh"></span>
+          </a>
+          <div id="notes"></div>
+          <!-- <img src="images/staff.svg" alt="Staff" /> -->
+        </div>
+      </div>
+    </section>
+    <section id="intervalSizeSection">
+      <div class="container">
+        <div class="title">Choose interval size</div>
+        <div class="radio">
+          <div class="radioGroup size">
+            <input type="radio" name="size" id="size-small" />
+            <label for="size-small">Small</label>
+          </div>
+          <div class="radioGroup size">
+            <input type="radio" name="size" id="size-big" />
+            <label for="size-big">Big</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="interavalDurationSection">
+      <div class="container">
+        <div class="title">Choose interval duration</div>
+        <div class="radio">
+          <div class="radioGroup duration">
+            <input type="radio" name="duration" id="duration-2" />
+            <label for="duration-2">2</label>
+          </div>
+          <div class="radioGroup duration">
+            <input type="radio" name="duration" id="duration-3" />
+            <label for="duration-3">3</label>
+          </div>
+          <div class="radioGroup duration">
+            <input type="radio" name="duration" id="duration-6" />
+            <label for="duration-6">6</label>
+          </div>
+          <div class="radioGroup duration">
+            <input type="radio" name="duration" id="duration-7" />
+            <label for="duration-7">7</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="answerSection">
+      <div class="container">
+        <div class="answer">
+          <span class="your_answer"> Your answer: </span>
+          <span id="size">Small</span>
+          <span id="duration">6</span>
+        </div>
+        <div class="container actions">
+          <a href="javascript:void(0)" id="submit" class="btn btn--primary"
+            >Check</a
+          >
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow/build/cjs/vexflow.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/generation.js"></script>
+    <script src="js/gameVisual.js"></script>
+    <script src="js/gameControl.js"></script>
+  </body>
+</html>
