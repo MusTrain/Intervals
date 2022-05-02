@@ -5,6 +5,8 @@
 - Rename repository from `train-intervals` to `IntervalsTrainer`
 - Init npm package
 - Move markup into `public` folder
+- Install `reload` module
+- Create reload script for make markup development faster
 
 ## [0.1.1][] - 2022-05-02
 
