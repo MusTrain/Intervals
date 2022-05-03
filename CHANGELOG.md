@@ -7,6 +7,7 @@
 - Move markup into `public` folder
 - Install `reload` module
 - Create reload script for make markup development faster
+- Create `.gitignore` and `.gitattributes`
 
 ## [0.1.1][] - 2022-05-02
 
