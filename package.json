@@ -3,7 +3,8 @@
   "version": "0.1.1",
   "description": "Todo",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "reload --dir public"
   },
   "repository": {
     "type": "git",
