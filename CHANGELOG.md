@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+- Fix plus, refresh, blue-check icons
+
 ## [0.1.2][] - 2022-05-03
 
 - Rename repository from `train-intervals` to `IntervalsTrainer`
