@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+- Fix version links in CHANGELOG.md
+
 ## [0.1.4][] - 2022-05-04
 
 - Added eslint, prettier
@@ -41,7 +43,8 @@
 - Create settings page markup
 - Create `CHANGELOG.md`
 
-[unreleased]: https://github.com/nieopierzony/IntervalsTrainer/compare/v0.1.3....HEAD
+[unreleased]: https://github.com/nieopierzony/IntervalsTrainer/compare/v0.1.4....HEAD
+[0.1.4]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.4
 [0.1.3]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.3
 [0.1.2]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.2
 [0.1.1]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.1
