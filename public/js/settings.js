@@ -104,7 +104,7 @@ const inputChangeHandler = ({ srcElement }) => {
 };
 
 const loadSettings = () => {
-  const settings = window.getLocalStorageItem("settings");
+  const settings = window.getSettings();
   if (!settings) {
     const isUpdateOk = window.updateSettings(defaultSettings);
     if (!isUpdateOk) throw new Error("Update was not ok");
