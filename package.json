@@ -3,8 +3,10 @@
   "version": "0.1.3",
   "description": "Todo",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "reload --dir public"
+    "test": "npm run fmt && echo TODO: Add tests",
+    "dev": "reload --dir public",
+    "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
+    "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\""
   },
   "repository": {
     "type": "git",

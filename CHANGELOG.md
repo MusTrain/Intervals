@@ -5,6 +5,7 @@
 - Added eslint, prettier
 - Create .editorconfig
 - Change the project files to match the new eslint config
+- Add scripts to check code style and find errors
 
 ## [0.1.3][] - 2022-05-04
 
