@@ -7,6 +7,7 @@
 - Change the project files to match the new eslint config
 - Add scripts to check code style and find errors
 - Add .github folder with templates and test actions
+- Create custom notes visualizer
 
 ## [0.1.3][] - 2022-05-04
 
