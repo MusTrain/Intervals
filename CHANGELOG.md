@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+## [0.1.4][] - 2022-05-04
+
 - Added eslint, prettier
 - Create .editorconfig
 - Change the project files to match the new eslint config
