@@ -33,7 +33,7 @@ const setLocalStorageItem = (key, data) => {
     return true;
   } catch (err) {
     console.error(err);
-    return null;
+    return false;
   }
 };
 

@@ -5,6 +5,7 @@
 - Fix version links in CHANGELOG.md
 - Fix refresh icon font
 - Add code comments
+- Return always boolean in `setLocalStorageItem()`
 
 ## [0.1.4][] - 2022-05-04
 
