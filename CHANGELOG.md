@@ -6,6 +6,7 @@
 - Move `updateSettings()` to storage.js
 - Create `getSettings()` in storage.js
 - Create `getState()`, `updateState()` in storage.js
+- Clear previous state on settings submit
 
 ## [0.1.2][] - 2022-05-03
 
