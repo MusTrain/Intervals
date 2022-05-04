@@ -150,6 +150,7 @@ gamesAmountPlus.addEventListener("click", incrementGamesAmount);
 const onSubmit = () => {
   try {
     // TODO: Maybe should make additional data validation
+    window.updateState();
     window.location.assign(GAME_PATH);
   } catch (err) {
     console.error(err);
