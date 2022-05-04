@@ -3,6 +3,7 @@
 ## [Unreleased][unreleased]
 
 - Fix version links in CHANGELOG.md
+- Fix refresh icon font
 
 ## [0.1.4][] - 2022-05-04
 

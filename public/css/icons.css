@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?dn7by8');
-  src: url('../fonts/icomoon.eot?dn7by8#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?dn7by8') format('truetype'), url('../fonts/icomoon.woff?dn7by8') format('woff'),
-    url('../fonts/icomoon.svg?dn7by8#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?te68i3');
+  src: url('../fonts/icomoon.eot?te68i3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?te68i3') format('truetype'), url('../fonts/icomoon.woff?te68i3') format('woff'),
+    url('../fonts/icomoon.svg?te68i3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,12 +24,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-refresh:before {
+  content: '\1f504';
+  color: #bec3ce;
+}
 .icon-minus:before {
   content: '\2d';
   color: #bec3ce;
 }
 .icon-blue-check:before {
-  content: '\5e';
+  content: '\2714';
   color: #1b76ff;
 }
 .icon-plus:before {
@@ -62,9 +66,6 @@
 .icon-natural:before {
   content: '\266e';
   color: #9db2c7;
-}
-.icon-refresh:before {
-  content: '\e906';
 }
 .icon-save:before {
   content: '\1f4be';
