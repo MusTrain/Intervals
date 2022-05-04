@@ -7,6 +7,7 @@
 - Create `getSettings()` in storage.js
 - Create `getState()`, `updateState()` in storage.js
 - Clear previous state on settings submit
+- Create game.js with mock functions
 
 ## [0.1.2][] - 2022-05-03
 
