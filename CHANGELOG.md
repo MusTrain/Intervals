@@ -5,6 +5,7 @@
 - Fix plus, refresh, blue-check icons
 - Move `updateSettings()` to storage.js
 - Create `getSettings()` in storage.js
+- Create `getState()`, `updateState()` in storage.js
 
 ## [0.1.2][] - 2022-05-03
 

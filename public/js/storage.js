@@ -25,8 +25,15 @@ const getSettings = () => getLocalStorageItem("settings");
 const updateSettings = (newData = window.gameSettings) =>
   setLocalStorageItem("settings", newData);
 
+const getState = () => getLocalStorageItem("state");
+const updateState = (newData = window.currentState) =>
+  setLocalStorageItem("state", newData);
+
 window.getLocalStorageItem = getLocalStorageItem;
 window.setLocalStorageItem = setLocalStorageItem;
 
 window.getSettings = getSettings;
 window.updateSettings = updateSettings;
+
+window.getState = getState;
+window.updateState = updateState;
