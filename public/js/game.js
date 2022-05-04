@@ -1,9 +1,11 @@
-"use strict";
+'use strict';
 
+// TODO: Remove next line, when using will be added
+// eslint-disable-next-line no-unused-vars
 let currentAnswer = null;
 
 // TODO: Generate task
-const generateTask = (settings) => ({ task: ["C", "D"], answer: "02" });
+const generateTask = () => ({ task: ['C', 'D'], answer: '02' });
 
 const nextTask = (settings = {}, state = {}) => {
   const { task, answer } = generateTask(settings);
@@ -11,7 +13,7 @@ const nextTask = (settings = {}, state = {}) => {
   state.taskCount += 1;
   state.currentAnswer = null;
   currentAnswer = answer;
-  updateState(state);
+  window.updateState(state);
 };
 
 const createNewGame = (settings) => {
@@ -19,20 +21,21 @@ const createNewGame = (settings) => {
     task: null,
     taskCount: 0,
     correct: 0,
-    currentAnswer: "",
+    currentAnswer: '',
   };
   window.updateState(newState);
   nextTask(settings, newState);
 };
 
-// TODO
-const parseState = () => {};
+const parseState = () => {
+  // TODO
+};
 
 const main = () => {
   try {
     const settings = window.getSettings();
     window.gameSettings = settings;
-    if (!settings) throw new Error("Settings were not found");
+    if (!settings) throw new Error('Settings were not found');
     const currentState = window.getState();
     window.currentState = currentState;
     if (!currentState) return createNewGame(settings);
@@ -40,8 +43,9 @@ const main = () => {
   } catch (err) {
     console.error(err);
     alert(err.message ? err.message : err);
-    window.location.assign("/settings.html");
+    window.location.assign('/settings.html');
   }
+  return true;
 };
 
 main();

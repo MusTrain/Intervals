@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 const MIN_GAMES_AMOUNT = 1;
 const MAX_GAMES_AMOUNT = 99;
 
-const GAME_PATH = "game.html";
+const GAME_PATH = 'game.html';
 
 const defaultSettings = {
   gamesAmount: 10,
@@ -12,23 +12,23 @@ const defaultSettings = {
   onlyAudio: false,
 };
 
-const gamesAmountInput = getElement("gamesAmountInput");
+const gamesAmountInput = window.getElement('gamesAmountInput');
 
-const clefGCheckbox = getElement("clefG");
-const clefFCheckbox = getElement("clefF");
+const clefGCheckbox = window.getElement('clefG');
+const clefFCheckbox = window.getElement('clefF');
 
-const sharpCheckbox = getElement("sharp");
-const flatCheckbox = getElement("flat");
-const naturalCheckbox = getElement("natural");
+const sharpCheckbox = window.getElement('sharp');
+const flatCheckbox = window.getElement('flat');
+const naturalCheckbox = window.getElement('natural');
 
-const staffCheckbox = getElement("withStaff");
-const audioCheckbox = getElement("audio");
+const staffCheckbox = window.getElement('withStaff');
+const audioCheckbox = window.getElement('audio');
 
 const inputsToSettings = [
   {
     input: gamesAmountInput,
-    valueName: "value",
-    path: "gamesAmount",
+    valueName: 'value',
+    path: 'gamesAmount',
     format: (val) => +val,
     validate(value) {
       const int = +value;
@@ -39,44 +39,41 @@ const inputsToSettings = [
   },
   {
     input: clefGCheckbox,
-    valueName: "checked",
-    path: "clefs.g",
+    valueName: 'checked',
+    path: 'clefs.g',
     validate: (value) => (!value ? clefFCheckbox.checked : true),
   },
   {
     input: clefFCheckbox,
-    valueName: "checked",
-    path: "clefs.f",
+    valueName: 'checked',
+    path: 'clefs.f',
     validate: (value) => (!value ? clefGCheckbox.checked : true),
   },
   {
     input: sharpCheckbox,
-    valueName: "checked",
-    path: "accidentals.sharp",
-    validate: (value) =>
-      !value ? flatCheckbox.checked || naturalCheckbox.checked : true,
+    valueName: 'checked',
+    path: 'accidentals.sharp',
+    validate: (value) => (!value ? flatCheckbox.checked || naturalCheckbox.checked : true),
   },
   {
     input: flatCheckbox,
-    valueName: "checked",
-    path: "accidentals.flat",
-    validate: (value) =>
-      !value ? sharpCheckbox.checked || naturalCheckbox.checked : true,
+    valueName: 'checked',
+    path: 'accidentals.flat',
+    validate: (value) => (!value ? sharpCheckbox.checked || naturalCheckbox.checked : true),
   },
   {
     input: naturalCheckbox,
-    valueName: "checked",
-    path: "accidentals.natural",
-    validate: (value) =>
-      !value ? flatCheckbox.checked || sharpCheckbox.checked : true,
+    valueName: 'checked',
+    path: 'accidentals.natural',
+    validate: (value) => (!value ? flatCheckbox.checked || sharpCheckbox.checked : true),
   },
   {
     input: staffCheckbox,
-    valueName: "checked",
-    path: "onlyAudio",
+    valueName: 'checked',
+    path: 'onlyAudio',
     format: (val) => !val,
   },
-  { input: audioCheckbox, valueName: "checked", path: "onlyAudio" },
+  { input: audioCheckbox, valueName: 'checked', path: 'onlyAudio' },
 ];
 
 const inputChangeHandler = ({ srcElement }) => {
@@ -84,18 +81,16 @@ const inputChangeHandler = ({ srcElement }) => {
     const { id } = srcElement;
     const { gameSettings, resolvePath, updateValueByPath } = window;
     const relation = inputsToSettings.find((el) => el.input.id === id);
-    if (!relation) throw new Error("Relation not found", srcElement);
+    if (!relation) throw new Error('Relation not found', srcElement);
     const { valueName, path, validate, format } = relation;
     let resolvedSettingsValue = resolvePath(gameSettings, path);
     const isValidData = validate ? validate(srcElement[valueName]) : true;
     if (!isValidData) {
       // Set old value
       srcElement[valueName] = resolvedSettingsValue;
-      throw new Error("Data are not valid");
+      throw new Error('Data are not valid');
     }
-    const formatted = format
-      ? format(srcElement[valueName])
-      : srcElement[valueName];
+    const formatted = format ? format(srcElement[valueName]) : srcElement[valueName];
     updateValueByPath(gameSettings, path, formatted);
     window.updateSettings();
   } catch (err) {
@@ -107,7 +102,7 @@ const loadSettings = () => {
   const settings = window.getSettings();
   if (!settings) {
     const isUpdateOk = window.updateSettings(defaultSettings);
-    if (!isUpdateOk) throw new Error("Update was not ok");
+    if (!isUpdateOk) throw new Error('Update was not ok');
     return loadSettings();
   }
   window.gameSettings = settings;
@@ -117,13 +112,14 @@ const loadSettings = () => {
     const resolvedData = resolvePath(gameSettings, path);
     const formatted = format ? format(resolvedData) : resolvedData;
     input[valueName] = formatted;
-    input.addEventListener("change", inputChangeHandler);
+    input.addEventListener('change', inputChangeHandler);
   }
+  return true;
 };
 
 /* Games amount */
-const gamesAmountMinus = getElement("amountMinus");
-const gamesAmountPlus = getElement("amountPlus");
+const gamesAmountMinus = window.getElement('amountMinus');
+const gamesAmountPlus = window.getElement('amountPlus');
 
 const setGamesAmount = (amount = defaultSettings.gamesAmount) => {
   gamesAmountInput.value = amount;
@@ -143,8 +139,8 @@ const incrementGamesAmount = () => {
   setGamesAmount(gamesAmount + 1);
 };
 
-gamesAmountMinus.addEventListener("click", decrementGamesAmount);
-gamesAmountPlus.addEventListener("click", incrementGamesAmount);
+gamesAmountMinus.addEventListener('click', decrementGamesAmount);
+gamesAmountPlus.addEventListener('click', incrementGamesAmount);
 
 /* Submit button */
 const onSubmit = () => {
@@ -159,7 +155,7 @@ const onSubmit = () => {
   }
 };
 
-const submitButton = getElement("submit");
-submitButton.addEventListener("click", onSubmit);
+const submitButton = window.getElement('submit');
+submitButton.addEventListener('click', onSubmit);
 
 loadSettings();

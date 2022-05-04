@@ -1,3 +1,5 @@
+'use strict';
+
 const getLocalStorageItem = (key, deleteOnError = true) => {
   try {
     const raw = window.localStorage.getItem(key);
@@ -21,13 +23,11 @@ const setLocalStorageItem = (key, data) => {
   }
 };
 
-const getSettings = () => getLocalStorageItem("settings");
-const updateSettings = (newData = window.gameSettings) =>
-  setLocalStorageItem("settings", newData);
+const getSettings = () => getLocalStorageItem('settings');
+const updateSettings = (newData = window.gameSettings) => setLocalStorageItem('settings', newData);
 
-const getState = () => getLocalStorageItem("state");
-const updateState = (newData = window.currentState) =>
-  setLocalStorageItem("state", newData);
+const getState = () => getLocalStorageItem('state');
+const updateState = (newData = window.currentState) => setLocalStorageItem('state', newData);
 
 window.getLocalStorageItem = getLocalStorageItem;
 window.setLocalStorageItem = setLocalStorageItem;
