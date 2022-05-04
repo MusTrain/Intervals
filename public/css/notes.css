@@ -1,0 +1,62 @@
+#notes {
+  margin-top: 50px;
+}
+.stave {
+  background-image: url('../images/stave.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 345px;
+  height: 80px;
+  position: relative;
+}
+.clef {
+  position: absolute;
+  left: 75px;
+}
+.clef.f {
+  width: 55px;
+  height: 64px;
+  background-image: url('../images/clef-f.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.clef.g {
+  width: calc(46px / 1.25);
+  height: calc(132px / 1.25);
+  background-image: url('../images/clef-g.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -10px;
+}
+
+.note {
+  background-image: url('../images/note.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: calc(575px / 20);
+  height: calc(386px / 20);
+  position: absolute;
+  top: 30px;
+  left: 150px;
+}
+
+.note:last-child {
+  left: 200px;
+}
+
+.note[data-content='c4']::after,
+.note[data-content='h3']::after,
+.note[data-content='e2']::after,
+.note[data-content='d2']::after {
+  content: '';
+  position: absolute;
+  background: #0f172a;
+  width: 40px;
+  height: 2px;
+  left: -20%;
+}
+
+.note[data-content='c4']::after,
+.note[data-content='e2']::after {
+  top: 50%;
+}
