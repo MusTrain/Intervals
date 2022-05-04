@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+## [0.1.3][] - 2022-05-04
+
 - Fix plus, refresh, blue-check icons
 - Move `updateSettings()` to storage.js
 - Create `getSettings()` in storage.js
@@ -30,7 +32,8 @@
 - Create settings page markup
 - Create `CHANGELOG.md`
 
-[unreleased]: https://github.com/nieopierzony/IntervalsTrainer/compare/v0.1.2....HEAD
+[unreleased]: https://github.com/nieopierzony/IntervalsTrainer/compare/v0.1.3....HEAD
+[0.1.3]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.3
 [0.1.2]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.2
 [0.1.1]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.1
 [0.1.0]: https://github.com/nieopierzony/IntervalsTrainer/releases/tag/v0.1.0
