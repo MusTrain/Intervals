@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/nieopierzony/IntervalsTrainer#readme",
   "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
     "reload": "^3.2.0"
   }
 }

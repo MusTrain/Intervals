@@ -2,6 +2,9 @@
 
 ## [Unreleased][unreleased]
 
+- Added eslint, prettier
+- Create .editorconfig
+
 ## [0.1.3][] - 2022-05-04
 
 - Fix plus, refresh, blue-check icons
