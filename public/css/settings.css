@@ -16,7 +16,7 @@
 
 /* gamesAmount */
 section#gamesAmount {
-  background-image: url("../images/bg.png");
+  background-image: url('../images/bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -57,7 +57,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
