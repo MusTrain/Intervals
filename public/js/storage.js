@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * Gets JSON from local storage and parses it
+ * @param {string!} key - Key
+ * @param {boolean} [deleteOnError=true] - Whether to delete the current value of an element
+ *    if an error occurred while parsing it
+ * @returns {Object}
+ */
 const getLocalStorageItem = (key, deleteOnError = true) => {
   try {
     const raw = window.localStorage.getItem(key);
@@ -12,6 +19,13 @@ const getLocalStorageItem = (key, deleteOnError = true) => {
   }
 };
 
+/**
+ * Set the new value of the item in local storage.
+ * The data passes the stringify
+ * @param {string!} key - Key
+ * @param {Object} data - JSON data to store
+ * @returns {boolean} - Whether or not it's successful
+ */
 const setLocalStorageItem = (key, data) => {
   try {
     const stringifiedData = JSON.stringify(data);
@@ -19,11 +33,20 @@ const setLocalStorageItem = (key, data) => {
     return true;
   } catch (err) {
     console.error(err);
-    return null;
+    return false;
   }
 };
 
+/**
+ * Alias for getLocalStorageItem('settings')
+ * @returns {Settings}
+ */
 const getSettings = () => getLocalStorageItem('settings');
+/**
+ * Alias for setLocalStorageItem('settings', newData);
+ * @param {Settings} [newData=window.gameSettings] - New settings object
+ * @returns {boolean} - Whether or not it's successful
+ */
 const updateSettings = (newData = window.gameSettings) => setLocalStorageItem('settings', newData);
 
 const getState = () => getLocalStorageItem('state');
