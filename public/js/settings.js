@@ -97,19 +97,16 @@ const inputChangeHandler = ({ srcElement }) => {
       ? format(srcElement[valueName])
       : srcElement[valueName];
     updateValueByPath(gameSettings, path, formatted);
-    updateSettings();
+    window.updateSettings();
   } catch (err) {
     console.error(err);
   }
 };
 
-const updateSettings = (newData = window.gameSettings) =>
-  window.setLocalStorageItem("settings", newData);
-
 const loadSettings = () => {
   const settings = window.getLocalStorageItem("settings");
   if (!settings) {
-    const isUpdateOk = updateSettings(defaultSettings);
+    const isUpdateOk = window.updateSettings(defaultSettings);
     if (!isUpdateOk) throw new Error("Update was not ok");
     return loadSettings();
   }
@@ -131,7 +128,7 @@ const gamesAmountPlus = getElement("amountPlus");
 const setGamesAmount = (amount = defaultSettings.gamesAmount) => {
   gamesAmountInput.value = amount;
   window.gameSettings.gamesAmount = amount;
-  updateSettings();
+  window.updateSettings();
 };
 
 const decrementGamesAmount = () => {
