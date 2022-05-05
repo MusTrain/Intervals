@@ -47,7 +47,8 @@
 .note[data-content='c4']::after,
 .note[data-content='h3']::after,
 .note[data-content='e2']::after,
-.note[data-content='d2']::after {
+.note[data-content='d2']::after,
+.note[data-content='a5']::after {
   content: '';
   position: absolute;
   background: #0f172a;
@@ -57,6 +58,7 @@
 }
 
 .note[data-content='c4']::after,
-.note[data-content='e2']::after {
+.note[data-content='e2']::after,
+.note[data-content='a5']::after {
   top: 50%;
 }
