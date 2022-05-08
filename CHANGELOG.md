@@ -4,6 +4,7 @@
 
 - Fix version links in CHANGELOG.md
 - Fix refresh icon font
+- Create README.md
 
 ## [0.1.4][] - 2022-05-04
 
