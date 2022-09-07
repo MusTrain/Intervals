@@ -4,7 +4,6 @@
   "description": "Todo",
   "scripts": {
     "test": "npm run fmt && echo TODO: Add tests",
-    "dev": "reload --dir public",
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\""
   },
@@ -28,7 +27,6 @@
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.2",
-    "reload": "^3.2.0"
+    "prettier": "^2.6.2"
   }
 }
