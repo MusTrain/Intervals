@@ -5,7 +5,9 @@
   "scripts": {
     "test": "npm run fmt && echo TODO: Add tests",
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
-    "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\""
+    "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "repository": {
     "type": "git",
