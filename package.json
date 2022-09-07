@@ -2,6 +2,7 @@
   "name": "intervals-trainer",
   "version": "0.1.4",
   "description": "Todo",
+  "private": true,
   "scripts": {
     "test": "npm run fmt && echo TODO: Add tests",
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
