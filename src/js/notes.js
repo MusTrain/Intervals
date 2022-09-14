@@ -20,6 +20,11 @@ const getMargin = (note, clef) => {
 };
 
 const createStave = (containerId, { clef, notes }) => {
+<<<<<<< Updated upstream:src/js/notes.js
+=======
+  // Check the container
+  let isOk = true;
+>>>>>>> Stashed changes:public/js/notes.js
   const container = window.getElement(containerId);
   if (!container) throw new Error('Element not found');
   const elementsToCreate = [
@@ -29,17 +34,18 @@ const createStave = (containerId, { clef, notes }) => {
   ];
   for (const [i, note] of Object.entries(notes)) {
     const margin = getMargin(note, clef);
+    console.log('MARGIN', margin);
+    isOk = margin > -40;
     elementsToCreate.push({
       name: `note${i}`,
       classes: ['note'],
-      attributes: { 'data-content': note, style: `top: ${margin}px` },
+      attributes: { 'data-content': note.toLowerCase(), style: `top: ${margin}px` },
       parent: 'notesContainer',
     });
   }
   const { stave } = window.createElements(elementsToCreate);
-  container.appendChild(stave);
+  container.replaceChildren(stave);
+  if (!isOk) debugger;
 };
-
-createStave('notes', { clef: 'g', notes: ['g4', 'c5'] });
 
 window.createStave = createStave;
