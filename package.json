@@ -3,8 +3,9 @@
   "version": "0.1.4",
   "description": "Todo",
   "scripts": {
-    "test": "npm run fmt && echo TODO: Add tests",
-    "dev": "reload --dir public",
+    "test": "npm run fmt && playwright test",
+    "test:report": "playwright show-report",
+    "dev": "reload --dir public --port 8081",
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.html\" \"**/*.css\""
   },
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/nieopierzony/IntervalsTrainer#readme",
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",

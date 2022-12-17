@@ -1,0 +1,44 @@
+.welcome_header {
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding: 40px 0;
+}
+
+#welcome .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome_header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.welcome_header span {
+    color: var(--grey);
+    font-size: 17px;
+}
+
+
+.welcome_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.welcome_image img {
+    max-width: 80%;
+
+}
+
+#welcome p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 30px;
+
+}

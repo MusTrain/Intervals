@@ -20,7 +20,7 @@
     <header>
       <div class="container">
         <div class="header__title left">
-          <span>Intervals</span>
+          <span>Інтервали</span>
         </div>
       </div>
     </header>
@@ -28,16 +28,16 @@
       <div class="alert animateOpen">
         <div class="container actions">
           <div class="alertDescription">
-            <div class="correct" id="correctAlert"><span class="icon-check"></span><span>Answer is correct</span></div>
+            <div class="correct" id="correctAlert"><span class="icon-check"></span><span>Вірна відповідь</span></div>
             <div class="mistake" id="incorrectAlert">
-              <div class="alertTitle"><span class="icon-x"></span><span>Answer is incorrect</span></div>
+              <div class="alertTitle"><span class="icon-x"></span><span>Невірно</span></div>
               <div class="answer">
-                <span class="correct_answer"> Correct answer is: </span>
-                <span id="correctSize">Small</span>
+                <span class="correct_answer"> Правильна відповідь: </span>
+                <span id="correctSize">Малий</span>
                 <span id="correctDuration">6</span>
               </div>
             </div>
-            <a href="javascript:void(0)" id="next" class="btn btn--primary">Next</a>
+            <a href="javascript:void(0)" id="next" class="btn btn--primary">Наступний</a>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
     <section id="notesSection">
       <div class="container">
         <div class="card">
-          <a href="javascript:void(0)" onclick="nextTask()">
+          <a href="javascript:void(0)" onclick="createTask()">
             <span class="icon-refresh"></span>
           </a>
           <div id="notes"></div>
@@ -54,22 +54,22 @@
     </section>
     <section id="intervalSizeSection">
       <div class="container">
-        <div class="title">Choose interval size</div>
+        <div class="title">Оберіть розмір інтервалу</div>
         <div class="radio">
           <div class="radioGroup size">
             <input type="radio" name="size" id="size-small" />
-            <label for="size-small">Small</label>
+            <label for="size-small">Малий</label>
           </div>
           <div class="radioGroup size">
             <input type="radio" name="size" id="size-big" />
-            <label for="size-big">Big</label>
+            <label for="size-big">Великий</label>
           </div>
         </div>
       </div>
     </section>
     <section id="interavalDurationSection">
       <div class="container">
-        <div class="title">Choose interval duration</div>
+        <div class="title">Оберіть тривалість інтервалу</div>
         <div class="radio">
           <div class="radioGroup duration">
             <input type="radio" name="duration" id="duration-2" />
@@ -93,20 +93,19 @@
     <section id="answerSection">
       <div class="container">
         <div class="answer">
-          <span class="your_answer"> Your answer: </span>
-          <span id="size">Small</span>
+          <span class="your_answer"> Ваша відповідь: </span>
+          <span id="size">Малий</span>
           <span id="duration">6</span>
         </div>
         <div class="container actions">
-          <a href="javascript:void(0)" id="submit" class="btn btn--primary">Check</a>
+          <a href="javascript:void(0)" id="submit" class="btn btn--primary">Перевірити</a>
         </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/vexflow/build/cjs/vexflow.js"></script>
     <script src="js/general.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/generation.js"></script>
-    <script src="js/notes.js"></script>
+    <script src="js/stave.js"></script>
     <script src="js/game.js"></script>
   </body>
 </html>

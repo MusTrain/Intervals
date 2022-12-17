@@ -4,27 +4,21 @@
 // eslint-disable-next-line no-unused-vars
 let currentAnswer = null;
 
-// TODO: Generate task
-const generateTask = () => ({ task: ['C', 'D'], answer: '02' });
-
-const nextTask = (settings = {}, state = {}) => {
-  const { task, answer } = generateTask(settings);
-  state.task = task;
-  state.taskCount += 1;
-  state.currentAnswer = null;
-  currentAnswer = answer;
-  window.updateState(state);
+const BLANK_STATE = {
+  task: null,
+  taskCount: 0,
+  correct: 0,
+  currentAnswer: '',
 };
 
-const createNewGame = (settings) => {
-  const newState = {
-    task: null,
-    taskCount: 0,
-    correct: 0,
-    currentAnswer: '',
-  };
-  window.updateState(newState);
-  nextTask(settings, newState);
+const createTask = (settings = window.settings, state = {}) => {
+  const { interval, notes, clef } = window.generateTask(settings);
+  console.log(notes);
+  state.task = { notes, clef };
+  state.taskCount += 1;
+  state.currentAnswer = null;
+  currentAnswer = interval;
+  return { interval, notes, clef };
 };
 
 const parseState = () => {
@@ -33,17 +27,27 @@ const parseState = () => {
 
 const main = () => {
   try {
+    // Load game settings
     const settings = window.getSettings();
     window.gameSettings = settings;
     if (!settings) throw new Error('Settings were not found');
+
+    // Find state from the last game
     const currentState = window.getState();
     window.currentState = currentState;
-    if (!currentState) return createNewGame(settings);
-    else parseState(currentState);
+
+    // TODO: Handle situation with parsing state
+    const gameState = { ...BLANK_STATE };
+    // TODO: Made class for state operations
+    window.updateState(gameState);
+
+    const Stave = new window.StaveBuilder('notes');
+    const { clef, notes } = createTask(settings, gameState);
+    Stave.setClef(clef).setNotes(notes);
   } catch (err) {
     console.error(err);
     alert(err.message ? err.message : err);
-    window.location.assign('/settings.html');
+    // window.location.assign('/settings.html');
   }
   return true;
 };
